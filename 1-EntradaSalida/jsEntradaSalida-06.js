@@ -13,6 +13,7 @@ function sumar() {
   numeroIngresadoDos = parseInt(numeroIngresadoDos);
 
   sumaNumeros = numeroIngresadoUno + numeroIngresadoDos;
+
   let mensaje = `La suma de los numeros ingresados da ${sumaNumeros} (La suma no toma los decimales)`;
   alert(mensaje);
 }
