@@ -6,8 +6,8 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento() {
   let importe = parseInt(document.getElementById("txtIdImporte").value);
   //console.log(importe); hecho para controlar
-  let resulDesc = importe * 0.75;
-  //console.log(resulDesc); hecho para controlar
-  document.getElementById("txtIdResultado").value = parseInt(resulDesc);
+  let resul = importe * 0.75;
+  //console.log(resul); hecho para controlar
+  document.getElementById("txtIdResultado").value = parseInt(resul);
   //alert("ok");
 }
