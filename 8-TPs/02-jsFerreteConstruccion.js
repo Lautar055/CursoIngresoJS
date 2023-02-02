@@ -5,26 +5,26 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 */
 
 function Rectangulo() {
-  let numUno = parseInt(document.getElementById("txtIdLargo").value);
-  let numDos = parseInt(document.getElementById("txtIdAncho").value);
+  let numUno = parseFloat(document.getElementById("txtIdLargo").value);
+  let numDos = parseFloat(document.getElementById("txtIdAncho").value);
 
   let rectAlabre = (numUno + numDos) * 2 * 3;
   alert(`Se van a necesitar ${rectAlabre}m de alambre para hacer tres bueltas`);
 }
 function Circulo() {
-  let numTres = parseInt(document.getElementById("txtIdRadio").value);
+  let numTres = parseFloat(document.getElementById("txtIdRadio").value);
 
   let diametro = numTres * 2;
   let circunferencia = diametro * Math.PI;
-  circunferencia = parseInt(circunferencia);
+  circunferencia = parseFloat(circunferencia);
   let circunAlam = circunferencia * 3;
 
   alert(`Se van a necesitar ${circunAlam}m de alambre para hacer tres bueltas`);
 }
 
 function Materiales() {
-  let numUno = parseInt(document.getElementById("txtIdLargo").value);
-  let numDos = parseInt(document.getElementById("txtIdAncho").value);
+  let numUno = parseFloat(document.getElementById("txtIdLargo").value);
+  let numDos = parseFloat(document.getElementById("txtIdAncho").value);
 
   let area = numUno * numDos;
   let bolsasCal = area * 3;
