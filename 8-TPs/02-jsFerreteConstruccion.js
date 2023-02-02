@@ -16,7 +16,7 @@ function Circulo() {
 
   let diametro = numTres * 2;
   let circunferencia = diametro * Math.PI;
-  circunferencia = parseFloat(circunferencia);
+  circunferencia = parseInt(circunferencia);
   let circunAlam = circunferencia * 3;
 
   alert(`Se van a necesitar ${circunAlam}m de alambre para hacer tres bueltas`);
