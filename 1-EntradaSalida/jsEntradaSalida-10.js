@@ -3,7 +3,8 @@ Debemos lograr tomar el importe por ID.
 Transformarlo a entero (parseInt), luego
 mostrar el importe con un Descuento del 25 %
 en el cuadro de texto "RESULTADO"*/
-function mostrarAumento() {
+
+/* function mostrarAumento() {
   let importe = parseInt(document.getElementById("txtIdImporte").value);
   let valores = 0.75;
   let resul = importe * valores;
@@ -11,7 +12,7 @@ function mostrarAumento() {
   //console.log(resul); hecho para controlar
   document.getElementById("txtIdResultado").value = parseInt(resul);
   //alert("ok");
-}
+} */
 
 /* Ejercicio 10.bis: Debemos lograr tomar el importe por ID. Lautaro D'Andrea
 Transformarlo a entero (parseInt), luego
@@ -21,7 +22,7 @@ function mostrarAumento() {
   let importe = parseInt(document.getElementById("txtIdImporte").value);
   let valores = parseInt(
     prompt(
-      "De cuanto es el porcentaje, en caso de saer negativo introduzca un menos"
+      "De cuanto es el porcentaje, en caso de ser un descuento introduzca un menos (Ej: -10)"
     )
   );
 
