@@ -10,7 +10,7 @@ function Sumar() {
 
   let numSum = numUno + numDos + numTres;
 
-  alert(numSum);
+  alert(`la suma de los precios es ${numSum}`);
 }
 
 function Promedio() {
@@ -21,7 +21,7 @@ function Promedio() {
   let numSum = numUno + numDos + numTres;
   let numProm = parseInt(numSum / 3);
 
-  alert(numProm);
+  alert(`el promedio de precios es ${numProm}`);
 }
 
 function PrecioFinal() {
@@ -32,5 +32,5 @@ function PrecioFinal() {
   let numSum = numUno + numDos + numTres;
   let numIVA = numSum * 1.21;
 
-  alert(numIVA);
+  alert(`el precio final (+IVA) es ${numIVA}`);
 }
