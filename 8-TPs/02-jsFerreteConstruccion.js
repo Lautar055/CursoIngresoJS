@@ -27,8 +27,8 @@ function Materiales() {
   let numDos = parseFloat(document.getElementById("txtIdAncho").value);
 
   let area = numUno * numDos;
-  let bolsasCal = area * 3;
-  let bolsasCem = area * 2;
+  let bolsasCal = parseFloat(area * 3);
+  let bolsasCem = parseFloat(area * 2);
 
   alert(
     `Se van a necesitar ${bolsasCem} bolsas de cemento y ${bolsasCal} bolsas de cal pra el terreno de area ${area} metros cuadrados`
