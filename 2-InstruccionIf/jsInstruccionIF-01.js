@@ -1,6 +1,8 @@
-function mostrar()
-{
-	//tomo la edad  
-	alert("ok");
+function mostrar() {
+  let edad = parseInt(document.getElementById("txtIdEdad").value);
 
-}//FIN DE LA FUNCIÓN
+  if (edad == 15) {
+    alert("niña bonita");
+  } else {
+  }
+} //FIN DE LA FUNCIÓN

@@ -1,6 +1,8 @@
-function mostrar()
-{
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");	
+function mostrar() {
+  let num = parseInt(Math.random() * 11);
+  console.log(num);
 
-}//FIN DE LA FUNCIÓN
+  if (num > 0 && num < 11) {
+    alert(num);
+  }
+} //FIN DE LA FUNCIÓN
