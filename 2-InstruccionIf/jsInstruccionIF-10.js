@@ -1,5 +1,5 @@
 function mostrar() {
-  let num = parseInt(Math.random() * 11);
+  let num = Math.round(Math.random() * 11);
   let mensaje = " hubo un error";
   console.log(num);
 
