@@ -1,7 +1,10 @@
 //Lautaro D'Andrea
 function mostrar() {
   let max = 10;
-  let num = Math.round(Math.random() * max);
+  let min = 1;
+  //let num = Math.round(Math.random() * max);
+  let num = Math.floor(Math.random() * max + min);
+  //let num = Math.ceil(Math.random() * max);
   let mensaje = " hubo un error";
 
   if (num == 9 || num == 10) {
