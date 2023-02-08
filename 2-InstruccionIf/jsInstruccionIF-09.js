@@ -1,6 +1,8 @@
+//Lautaro D'Andrea
 function mostrar() {
-  let num = Math.round(Math.random() * 11);
-  console.log(num);
+  let max = 10;
+  let min = 1;
+  let num = Math.round(Math.random() * max + min);
 
   if (num > 0 && num < 11) {
     alert(num);
