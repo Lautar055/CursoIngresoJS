@@ -1,4 +1,4 @@
-/*4.	Para el departamento de iluminación:
+/*4.	Para el departamento de iluminación: Lautaro D'Andrea
 Tomando en cuenta que todas las lámparas están en oferta al mismo precio de $35 pesos final.
 A.	Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%. 
 B.	Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % y si es de otra marca el descuento es del 30%.
