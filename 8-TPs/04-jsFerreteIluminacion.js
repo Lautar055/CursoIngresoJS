@@ -107,7 +107,7 @@ function CalcularPrecio() {
  */
   //TP 4 switch(cantidad) y if (marca)
 
-  let cant = parseInt(document.getElementById("txtIdCantidad").value);
+  /*   let cant = parseInt(document.getElementById("txtIdCantidad").value);
   let marca = document.getElementById("Marca").value;
   let descuento = 0;
   let preFin;
@@ -141,6 +141,70 @@ function CalcularPrecio() {
         descuento = 40;
       } else {
         descuento = 30;
+      }
+      break;
+
+    default:
+      descuento = 50;
+  }
+
+  preFin = preUni * cant;
+  console.log(preFin);
+  preFin = parseInt(preFin - (preFin * descuento) / 100);
+
+  if (preFin > 120) {
+    preFinAum = preFin + (preFin * impuesto) / 100;
+    aum = preFinAum;
+    preFin = preFin + preFinAum;
+    preFin = `IIBB Usted pagará ${preFin}, siendo ${aum} el impuesto que se pagará.`;
+  }
+
+  document.getElementById("txtIdprecioDescuento").value = preFin; */
+
+  // TP4 TODO Switch
+
+  let cant = parseInt(document.getElementById("txtIdCantidad").value);
+  let marca = document.getElementById("Marca").value;
+  let descuento = 0;
+  let preFin;
+  let preUni = 35;
+  let = impuesto = 10;
+
+  switch (cant) {
+    case 1:
+    case 2:
+      break;
+    case 3:
+      switch (marca) {
+        case "ArgentinaLuz":
+          descuento = 15;
+          break;
+        case "FelipeLamparas":
+          descuento = 10;
+          break;
+        default:
+          descuento = 5;
+      }
+      break;
+
+    case 4:
+      switch (marca) {
+        case "ArgentinaLuz":
+        case "FelipeLamparas":
+          descuento = 25;
+          break;
+        default:
+          descuento = 20;
+      }
+      break;
+
+    case 5:
+      switch (marca) {
+        case "ArgentinaLuz":
+          descuento = 40;
+          break;
+        default:
+          descuento = 30;
       }
       break;
 
