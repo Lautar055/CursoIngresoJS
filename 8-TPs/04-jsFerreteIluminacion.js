@@ -54,7 +54,7 @@ function CalcularPrecio() {
 
   // TP 4 Ferrete iluminancion solo SWITCH (las marcas), IF(cantidad)
 
-  let cant = parseInt(document.getElementById("txtIdCantidad").value);
+  /*   let cant = parseInt(document.getElementById("txtIdCantidad").value);
   let marca = document.getElementById("Marca").value;
   let descuento = 0;
   let preFin;
@@ -92,6 +92,62 @@ function CalcularPrecio() {
         descuento = 5;
     }
   }
+  preFin = preUni * cant;
+  console.log(preFin);
+  preFin = parseInt(preFin - (preFin * descuento) / 100);
+
+  if (preFin > 120) {
+    preFinAum = preFin + (preFin * impuesto) / 100;
+    aum = preFinAum;
+    preFin = preFin + preFinAum;
+    preFin = `IIBB Usted pagará ${preFin}, siendo ${aum} el impuesto que se pagará.`;
+  }
+
+  document.getElementById("txtIdprecioDescuento").value = preFin;
+ */
+  //TP 4 switch(cantidad) y if (marca)
+
+  let cant = parseInt(document.getElementById("txtIdCantidad").value);
+  let marca = document.getElementById("Marca").value;
+  let descuento = 0;
+  let preFin;
+  let preUni = 35;
+  let = impuesto = 10;
+
+  switch (cant) {
+    case 1:
+    case 2:
+      break;
+    case 3:
+      if (marca == "ArgentinaLuz") {
+        descuento = 15;
+      } else if (marca == "FelipeLamparas") {
+        descuento = 10;
+      } else {
+        descuento = 5;
+      }
+      break;
+
+    case 4:
+      if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+        descuento = 25;
+      } else {
+        descuento = 20;
+      }
+      break;
+
+    case 5:
+      if (marca == "ArgentinaLuz") {
+        descuento = 40;
+      } else {
+        descuento = 30;
+      }
+      break;
+
+    default:
+      descuento = 50;
+  }
+
   preFin = preUni * cant;
   console.log(preFin);
   preFin = parseInt(preFin - (preFin * descuento) / 100);
