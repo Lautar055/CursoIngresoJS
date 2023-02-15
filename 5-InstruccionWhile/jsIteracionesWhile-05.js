@@ -1,12 +1,14 @@
 /*
-Al presionar el botón pedir un sexo
+Al presionar el botón pedir un sexo Lautaro D'Andrea
 'f' para femenino, 'm' para masculino.*/
-function mostrar()
-{
-	var sexoIngresado;
-	sexoIngresado = prompt("ingrese f ó m .");
+function mostrar() {
+  let sexo = prompt("Porfavor Ingrese 'f' para femenino o 'm' para masculino.");
+  console.log(sexo);
 
+  //No se porque pero si lo hago con ||, no me funciona y con && por alguna razon si
+  while (sexo != "f" && sexo != "m") {
+    sexo = prompt("Porfavor Ingrese 'f' para femenino o 'm' para masculino.");
+  }
 
-
-	txtIdSexo.value=sexoIngresado;
-}//FIN DE LA FUNCIÓN
+  document.getElementById("txtIdSexo").value = sexo;
+} //FIN DE LA FUNCIÓN
