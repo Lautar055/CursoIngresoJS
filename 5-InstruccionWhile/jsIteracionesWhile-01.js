@@ -23,9 +23,14 @@ function mostrar() {
 
   while (respuesta == "si") {
     numeroIngresado = parseInt(prompt("Ingresa una edad"));
-    while (isNaN(numeroIngresado)) {
+    while (
+      isNaN(numeroIngresado) ||
+      numeroIngresado > 123 ||
+      numeroIngresado < 0
+    ) {
       numeroIngresado = parseInt(prompt("Ingresa una edad valida"));
     }
+
     nomIng = prompt("ingresa el nombre");
     while (!isNaN(nomIng)) {
       nomIng = prompt("ingresa un nombre valido");
