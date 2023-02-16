@@ -1,16 +1,16 @@
 /*
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
-function mostrar() {
-  // declarar variables
-  /*   let banderaDelPrimero;
+//function mostrar() {
+// declarar variables
+/*   let banderaDelPrimero;
   let numeroIngresado;
   let numeroMaximo;
   let numeroMinimo;
   let respuesta;
  */
-  //iniciar variables
-  /*   banderaDelPrimero = true;
+//iniciar variables
+/*   banderaDelPrimero = true;
   respuesta = "si";
 
   while (respuesta == "si") {
@@ -35,7 +35,7 @@ function mostrar() {
 
   document.getElementById("txtIdMaximo").value = numeroMaximo;
   document.getElementById("txtIdMinimo").value = numeroMinimo; */
-} //FIN DE LA FUNCIÓN
+//} //FIN DE LA FUNCIÓN
 
 //While 9 bis: Al presionar el botón pedir  números  hasta que el usuario quiera,
 //mostrar el número máximo y el número mínimo ingresado.
