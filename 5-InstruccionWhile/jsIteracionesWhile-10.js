@@ -36,7 +36,7 @@ function mostrar() {
     } else if (numeroIngresado < 0) {
       sumaNegativos = sumaNegativos + numeroIngresado;
       cantidadNegativos = cantidadNegativos + 1;
-    } else if (numeroIngresado == 0) {
+    } else {
       cantidadCeros = cantidadCeros + 1;
     }
 
