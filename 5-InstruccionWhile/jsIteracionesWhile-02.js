@@ -13,7 +13,7 @@ con números DESCENDENTES, desde el 10 al 1.*/
 // while 2 bis Ingresar 5 números, y
 //determinar la cantidad de números que son mayores que 10 y menores 20 (inclusive en ambos casos)
 
-function mostrar() {
+/* function mostrar() {
   let contador = 5;
   let numeroIngresado;
   let contadorSecundario = 0;
@@ -30,7 +30,7 @@ function mostrar() {
     `Se ingresaron ${contadorSecundario} numeros mayores de 10 y menores de 20`
   );
 }
-
+ */
 // while 2 bis bis Ingresar numeros hasta que el usuario quiera.
 //eterminar la cantidad de números que son mayores que 10 y menores 20
 //(inclusive en ambos casos). También el promedio de los
