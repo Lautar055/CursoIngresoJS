@@ -1,7 +1,10 @@
-function mostrar()
-{
-	alert("ok");
+function mostrar() {
+  let repetir;
 
-
-
-}//FIN DE LA FUNCIÓN
+  for (i = 0; i < 1000; i++) {
+    repetir = prompt("para parar ingrese 'break'");
+    if (repetir == "break") {
+      break;
+    }
+  }
+} //FIN DE LA FUNCIÓN
