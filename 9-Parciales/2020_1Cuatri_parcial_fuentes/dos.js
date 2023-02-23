@@ -16,7 +16,6 @@ function mostrar() {
   let tipo;
   let precioBolsa;
   let descuento;
-  let precioBruto = 0;
   let precioFinal = 0;
   let acumuladorCemento = 0;
   let acumuladorCal = 0;
