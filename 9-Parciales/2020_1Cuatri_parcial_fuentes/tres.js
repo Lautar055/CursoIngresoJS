@@ -16,12 +16,12 @@ function mostrar() {
   let banderaTemperatura = true;
   let maxTemperatura;
   let nombreMaxTemperatura;
-  let contadorHombresViudos = 0;
   let contadorHombresSolterosViudos = 0;
   let contadorViejosFiebre = 0;
   let acumuladorEdadHombres = 0;
   let promedioSolteros;
   let contadorHombresSolteros = 0;
+  let contadorViudosTotal = 0;
 
   while (respuesta == "si") {
     nombre = prompt("Ingresa un nombre");
@@ -74,19 +74,19 @@ function mostrar() {
       maxTemperatura = temperaturaCorporal;
       nombreMaxTemperatura = nombre;
     }
-
-    if (sexo == "m") {
-      switch (estadoCivil) {
-        case "viudo":
-          if (edad > 17) {
-            contadorHombresViudos = contadorHombresViudos + 1;
-          }
+    switch (estadoCivil) {
+      case "viudo":
+        if (sexo == "m") {
           contadorHombresSolterosViudos = contadorHombresSolterosViudos + 1;
-          break;
-        case "soltero":
-          contadorHombresSolterosViudos = contadorHombresSolterosViudos + 1;
-          contadorHombresSolteros = contadorHombresSolteros + 1;
-      }
+        }
+        if (edad > 17) {
+          contadorViudosTotal = contadorViudosTotal + 1;
+        }
+        contadorHombresSolterosViudos = contadorHombresSolterosViudos + 1;
+        break;
+      case "soltero":
+        contadorHombresSolterosViudos = contadorHombresSolterosViudos + 1;
+        contadorHombresSolteros = contadorHombresSolteros + 1;
     }
 
     if (edad > 60 && temperaturaCorporal > 38) {
@@ -102,7 +102,7 @@ function mostrar() {
     `La persona con mas temperatura fue ${nombreMaxTemperatura} con ${maxTemperatura} grados`
   );
   console.log(
-    `La cantidad de hombres mayores de edad viudos es ${contadorHombresViudos} y el total de hombres solteros o viudos es ${contadorHombresSolterosViudos}`
+    `La cantidad de mayores de edad viudos es ${contadorViudosTotal} y el total de hombres solteros o viudos es ${contadorHombresSolterosViudos}`
   );
   console.log(
     `La cantidad de viejos con mas de 38° es: ${contadorViejosFiebre}`
