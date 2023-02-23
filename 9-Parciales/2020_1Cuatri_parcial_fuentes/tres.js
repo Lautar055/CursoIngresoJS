@@ -21,6 +21,7 @@ function mostrar() {
   let contadorViejosFiebre = 0;
   let acumuladorEdadHombres = 0;
   let promedioSolteros;
+  let contadorHombresSolteros = 0;
 
   while (respuesta == "si") {
     nombre = prompt("Ingresa un nombre");
@@ -75,13 +76,16 @@ function mostrar() {
     }
 
     if (sexo == "m") {
-      if (edad > 17 && estadoCivil == "viudo") {
-        contadorHombresViudos = contadorHombresViudos + 1;
-      }
-
-      if (estadoCivil == "viudo" || estadoCivil == "soltero") {
-        contadorHombresSolterosViudos = contadorHombresSolterosViudos + 1;
-        acumuladorEdadHombres = acumuladorEdadHombres + edad;
+      switch (estadoCivil) {
+        case "viudo":
+          if (edad > 17) {
+            contadorHombresViudos = contadorHombresViudos + 1;
+          }
+          contadorHombresSolterosViudos = contadorHombresSolterosViudos + 1;
+          break;
+        case "soltero":
+          contadorHombresSolterosViudos = contadorHombresSolterosViudos + 1;
+          contadorHombresSolteros = contadorHombresSolteros + 1;
       }
     }
 
@@ -92,7 +96,7 @@ function mostrar() {
     respuesta = prompt("¿Hay mas pasajeros? 'si'");
   }
 
-  promedioSolteros = acumuladorEdadHombres / contadorHombresSolterosViudos;
+  promedioSolteros = acumuladorEdadHombres / contadorHombresSolteros;
 
   console.log(
     `La persona con mas temperatura fue ${nombreMaxTemperatura} con ${maxTemperatura} grados`
@@ -107,3 +111,11 @@ function mostrar() {
     `El promedio de edad de los hombres solteros es ${promedioSolteros} años`
   );
 }
+/* if (edad > 17 && estadoCivil == "viudo") {
+  contadorHombresViudos = contadorHombresViudos + 1;
+}
+
+if (estadoCivil == "viudo" || estadoCivil == "soltero") {
+  contadorHombresSolterosViudos = contadorHombresSolterosViudos + 1;
+  acumuladorEdadHombres = acumuladorEdadHombres + edad;
+} */
