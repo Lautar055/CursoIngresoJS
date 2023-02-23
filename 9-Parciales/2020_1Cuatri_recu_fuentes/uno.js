@@ -16,15 +16,23 @@ function mostrar() {
   let marca;
   let fabricante;
   let numeromayorUnidades;
-  let productoMayorUnidades;
-  let totalCompraMayorUnidades;
-  let banderaMasUnidades = true;
   let banderaMasCaroJabon = true;
   let precioJabonCaro;
   let acumuladorUnidadesBarbijos = 0;
+  let acumuladorUnidadesAlcohol = 0;
+  let acumuladorUnidadesJabon = 0;
+  let acumuladorTotalCompraBarbijos = 0;
+  let acumuladorTotalCompraAlcohol = 0;
+  let acumuladorTotalCompraJabon = 0;
+  let contadorComprasBarbijos = 0;
+  let contadorComprasAlcohol = 0;
+  let contadorComprasJabon = 0;
   let totalcomra = 0;
-  let totalCompraJabonCaro;
+  let fabricanteJabonCaro;
   let totalUnidadesJabonCaro;
+  let mayorUnidades;
+  let mayorUnidadesCompras;
+  let mayorUnidadesComprasPromedio;
 
   for (i = 5; i > 0; i--) {
     producto = prompt(
@@ -79,11 +87,48 @@ function mostrar() {
     } else if (precioJabonCaro < precio) {
       precioJabonCaro = precio;
       totalUnidadesJabonCaro = unidades;
-      totalCompraJabonCaro = totalcomra;
+      fabricanteJabonCaro = fabricante;
     }
 
     if (producto == "barbijo") {
       acumuladorUnidadesBarbijos = acumuladorUnidadesBarbijos + unidades;
+      acumuladorTotalCompraBarbijos + totalcomra;
+      contadorComprasBarbijos = contadorComprasBarbijos + 1;
+    } else if (producto == "jabon") {
+      acumuladorUnidadesJabon = acumuladorUnidadesJabon + unidades;
+      acumuladorTotalCompraJabon = acumuladorTotalCompraJabon + totalcomra;
+      contadorComprasJabon = contadorComprasJabon + 1;
+    } else {
+      acumuladorUnidadesAlcohol = acumuladorUnidadesAlcohol + unidades;
+      acumuladorTotalCompraAlcohol = acumuladorTotalCompraAlcohol + totalcomra;
+      contadorComprasAlcohol = contadorComprasAlcohol + 1;
     }
   }
+
+  if (
+    acumuladorUnidadesBarbijos > acumuladorUnidadesJabon &&
+    acumuladorUnidadesBarbijos > acumuladorUnidadesAlcohol
+  ) {
+    mayorUnidades = acumuladorUnidadesBarbijos;
+    mayorUnidadesCompras = acumuladorTotalCompraBarbijos;
+    mayorCantidadCompras = contadorComprasBarbijos;
+  } else if (acumuladorUnidadesJabon > acumuladorUnidadesAlcohol) {
+    mayorUnidades = acumuladorUnidadesJabon;
+    mayorUnidadesCompras = acumuladorTotalCompraJabon;
+    mayorCantidadCompras = contadorComprasJabon;
+  } else {
+    mayorUnidades = acumuladorUnidadesAlcohol;
+    mayorUnidadesCompras = acumuladorTotalCompraAlcohol;
+    mayorCantidadCompras = contadorComprasAlcohol;
+  }
+
+  mayorUnidadesComprasPromedio = mayorUnidadesCompras / mayorCantidadCompras;
+
+  console.log(
+    `El jabon mas caro lo fabrica ${fabricanteJabonCaro} y vendio ${totalUnidadesJabonCaro} unidades`
+  );
+  console.log(
+    `El tipo de producto con mas unidades vendidas fue ${mayorUnidades} y ${mayorUnidadesComprasPromedio}`
+  );
+  console.log(`Se compraron ${acumuladorUnidadesBarbijos} barbijos`);
 }
