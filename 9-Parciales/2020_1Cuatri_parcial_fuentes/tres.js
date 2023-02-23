@@ -57,7 +57,7 @@ function mostrar() {
     temperaturaCorporal = parseInt(prompt("Ingresa la temperatura corporal"));
     while (
       isNaN(temperaturaCorporal) ||
-      temperaturaCorporal < 0 ||
+      temperaturaCorporal < 32 ||
       temperaturaCorporal > 50
     ) {
       temperaturaCorporal = parseInt(
